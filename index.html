@@ -11,7 +11,9 @@ header h1{font-size:22px;font-weight:700;color:#38bdf8}
 nav a{color:#f8fafc;margin-left:20px;text-decoration:none;font-weight:500;transition:.3s}
 nav a:hover{color:#38bdf8}
 
-.hero{display:flex;justify-content:center;align-items:center;height:80vh;text-align:center;padding:0 20px}
+.hero{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;height:80vh;text-align:center;padding:0 20px}
+.hero img{width:220px;height:220px;border-radius:50%;object-fit:cover;border:4px solid #38bdf8;box-shadow:0 6px 20px rgba(0,0,0,.6)}
+.hero div{max-width:600px}
 .hero h2{font-size:36px;margin-bottom:16px;color:#38bdf8;white-space:nowrap;overflow:hidden;border-right:3px solid #38bdf8;width:0;animation:typing 4s steps(40,end) forwards,blink .7s infinite}
 @keyframes typing{to{width:100%}}
 @keyframes blink{50%{border-color:transparent}}
@@ -35,12 +37,21 @@ section h2::after{content:"";display:block;width:60px;height:4px;background:#38b
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tag{background:#0f172a;color:#38bdf8;font-size:13px;padding:6px 10px;border-radius:6px}
 
-.skills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.skills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:40px}
 .skill{background:#1e293b;color:#f1f5f9;padding:10px 16px;border-radius:8px;font-size:14px;font-weight:500;transition:.3s}
 .skill:hover{background:#38bdf8;color:#0f172a;transform:scale(1.1)}
 
+.certificates{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.certificates img{width:280px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.6);transition:.3s}
+.certificates img:hover{transform:scale(1.05)}
+
 footer{background:#0f172a;text-align:center;padding:20px;color:#94a3b8;font-size:14px}
-@media(max-width:768px){header{padding:16px 20px}nav a{margin-left:12px}.hero h2{font-size:28px}section{padding:60px 20px}}
+@media(max-width:768px){
+    header{padding:16px 20px}
+    nav a{margin-left:12px}
+    .hero h2{font-size:28px}
+    section{padding:60px 20px}
+}
 </style>
 </head>
 <body>
@@ -55,56 +66,66 @@ footer{background:#0f172a;text-align:center;padding:20px;color:#94a3b8;font-size
 </header>
 
 <section class="hero">
-<div>
-<h2>Hi, I'm Abinaya 👩‍💻</h2>
-<p>An Android Developer passionate about building modern apps using <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, and clean <strong>UI/UX</strong> design. Currently pursuing IT at RD National College of Arts & Science.</p>
-<a href="mailto:abibaskar2006@gmail.com" class="btn btn-primary">Hire Me</a>
-<a href="https://github.com/your-github-username" class="btn btn-outline" target="_blank">GitHub</a>
-</div>
+    <!-- 👉 Your Photo here -->
+    <img src="your-photo.jpg" alt="Abinaya Photo">
+    <div>
+        <h2>Hi, I'm Abinaya 👩‍💻</h2>
+        <p>An Android Developer passionate about building modern apps using <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, and clean <strong>UI/UX</strong> design. Currently pursuing IT at RD National College of Arts & Science.</p>
+        <a href="mailto:abibaskar2006@gmail.com" class="btn btn-primary">Hire Me</a>
+        <a href="https://github.com/your-github-username" class="btn btn-outline" target="_blank">GitHub</a>
+    </div>
 </section>
 
 <section id="projects">
 <h2>Projects</h2>
 <div class="projects">
-<div class="project">
-<h3>Health & Fitness Tracker</h3>
-<p>App that generates 30-day diet and exercise plans based on user input. Includes star ratings and notifications.</p>
-<div class="tags"><span class="tag">Kotlin</span><span class="tag">Room DB</span><span class="tag">Jetpack Compose</span></div>
-</div>
-<div class="project">
-<h3>File Uploader</h3>
-<p>Image/file picker and uploader with offline-first queueing and progress tracking.</p>
-<div class="tags"><span class="tag">Kotlin</span><span class="tag">Offline</span><span class="tag">UI/UX</span></div>
-</div>
-<div class="project">
-<h3>Star Rating</h3>
-<p>Interactive star rating with background sound effects based on rating.</p>
-<div class="tags"><span class="tag">Compose</span><span class="tag">Animations</span></div>
-</div>
-<div class="project">
-<h3>Notification Sender</h3>
-<p>Customizable notification scheduler with channels and actions.</p>
-<div class="tags"><span class="tag">Kotlin</span><span class="tag">Notifications</span></div>
-</div>
+    <div class="project">
+        <h3>Health & Fitness Tracker</h3>
+        <p>App that generates 30-day diet and exercise plans based on user input. Includes star ratings and notifications.</p>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Room DB</span><span class="tag">Jetpack Compose</span></div>
+    </div>
+    <div class="project">
+        <h3>File Uploader</h3>
+        <p>Image/file picker and uploader with offline-first queueing and progress tracking.</p>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Offline</span><span class="tag">UI/UX</span></div>
+    </div>
+    <div class="project">
+        <h3>Star Rating</h3>
+        <p>Interactive star rating with background sound effects based on rating.</p>
+        <div class="tags"><span class="tag">Compose</span><span class="tag">Animations</span></div>
+    </div>
+    <div class="project">
+        <h3>Notification Sender</h3>
+        <p>Customizable notification scheduler with channels and actions.</p>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Notifications</span></div>
+    </div>
 </div>
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
 <div class="skills">
-<div class="skill">Kotlin</div>
-<div class="skill">Jetpack Compose</div>
-<div class="skill">Room / SQLite</div>
-<div class="skill">Material Design</div>
-<div class="skill">UI/UX</div>
-<div class="skill">Java</div>
-<div class="skill">Git / GitHub</div>
+    <div class="skill">Kotlin</div>
+    <div class="skill">Jetpack Compose</div>
+    <div class="skill">Room / SQLite</div>
+    <div class="skill">Material Design</div>
+    <div class="skill">UI/UX</div>
+    <div class="skill">Java</div>
+    <div class="skill">Git / GitHub</div>
+</div>
+
+<!-- 👉 Certificates Section -->
+<div class="certificates">
+    <img src="certificate1.jpg" alt="Certificate 1">
+    <img src="certificate2.jpg" alt="Certificate 2">
 </div>
 </section>
 
 <section id="about">
 <h2>About Me</h2>
-<p style="max-width:800px;margin:0 auto;text-align:center;color:#cbd5e1">I am a student of Information Technology at RD National College of Arts & Science. My focus is on creating practical and polished mobile applications that combine functionality with modern, minimal design. I enjoy problem-solving and improving user experiences through technology.</p>
+<p style="max-width:800px;margin:0 auto;text-align:center;color:#cbd5e1">
+I am a student of Information Technology at RD National College of Arts & Science. My focus is on creating practical and polished mobile applications that combine functionality with modern, minimal design. I enjoy problem-solving and improving user experiences through technology.
+</p>
 </section>
 
 <section id="contact">
